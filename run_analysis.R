@@ -88,4 +88,4 @@ str(means.and.standard.deviations)
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.)
 tidyset <- group_by(means.and.standard.deviations, subject, activity) %>% summarise_each(funs(mean))
-write.table(tidyset, "tidyMeansAndSDs.txt")
+write.table(tidyset, "tidyMeansAndSDs.txt", row.names = FALSE)
